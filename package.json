@@ -1,0 +1,11 @@
+{
+  "name": "promodoro",
+  "version": "1.0.0",
+  "description": "Promodoro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evgenii Kuzmin",
+  "license": "ISC"
+}
