@@ -30,7 +30,9 @@ function count(){
     // done!
         console.log('completed!');
     else{
-        remainingTimeDiv.innerHTML = millisToMinutes(remainingTime);
+        let remainingTimeStr = millisToMinutes(remainingTime);
+        document.title = remainingTimeStr;
+        remainingTimeDiv.innerHTML = remainingTimeStr;
         setTimeout(count, 1000);
     }
 }
