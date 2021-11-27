@@ -18,12 +18,12 @@
 <body>
     <header>Promodoro</header>
     <nav>
-        <div class="highlited">Focus</div>
-        <div>Short break</div>
-        <div>Long break</div>
+        <div class="highlited" data-timer-name="focus">Focus</div>
+        <div data-timer-name="short-break">Short break</div>
+        <div data-timer-name="long-break">Long break</div>
     </nav>
     <main>
-        <div id="remainingTime" class="highlited">25:00
+        <div id="remainingTime" class="highlited">
         </div>
         <button onclick="startCounting()">Start</button>
     </main>
