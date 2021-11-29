@@ -2,15 +2,24 @@ let activeTimer;
 const timers =     [
     {
         name: 'focus',
-        time: 2 * 60 * 1000
+        time: 2 * 60 * 1000,
+        'main-background': '#582A72',
+        'main-color': '#6B457F',
+        'highlihted-color': '#9C91A2'
     },
     {
         name: 'short-break',
-        time: 5 * 60 * 1000
+        time: 5 * 60 * 1000,
+        'main-background':'#294F6D',
+        'main-color':'#43637B',
+        'highlihted-color':'#8C959C'
     },
     {
         name: 'long-break',
-        time: 15 * 60 * 1000
+        time: 15 * 60 * 1000,
+        'main-background':'#AA5939',
+        'main-color':'#BE7D63',
+        'highlihted-color':'#F2E0D8'
     }
 ];
 let runningTimer;
@@ -32,6 +41,7 @@ function onLoad(){
             activeTimer = tab.dataset.timerName;
             tab.classList.add('highlited');
             
+            setTheme();
             showCounter(getActiveTimerDuration());
         }
     }));
@@ -42,6 +52,14 @@ function onLoad(){
     askForNotificationPermission();
 }
 
+function setTheme(){
+    const activeTimerObject = timers.find(p=>p.name === activeTimer);
+    ['main-background', 'main-color', 'highlihted-color'].forEach(
+        attr=>{
+            document.querySelector(':root').style.setProperty(`--${attr}`, activeTimerObject[attr]);
+        }
+    );
+}
 function getActiveTimerDuration(){
     const activeTimerObject = timers.find(p=>p.name === activeTimer);
     return activeTimerObject.time;

@@ -1,11 +1,17 @@
+:root{
+    --main-background:#582A72;
+    --main-color:#6B457F;
+    --highlihted-color:#9C91A2;
+}
+
 body{
-    background-color: #582A72;
+    background-color: var(--main-background);
     text-align: center;
-    color: #6B457F;
+    color: var(--main-color);
 }
 
 main{
-    background-color: #6B457F;
+    background-color: var(--main-color);
     font-size: 100px;;
     font-weight: 600;
     max-width: 480px;
@@ -25,11 +31,11 @@ nav div{
 }
 
 button{
-    background-color:#582A72;
+    background-color:var(--main-background);
     margin: 1em;
     padding: 1em;
 }
 
 .highlited{
-    color: #9C91A2;
+    color: var(--highlihted-color);
 }
